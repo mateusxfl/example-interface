@@ -23,7 +23,7 @@ namespace ExampleInterface.Services
                 double updatedInstallment = installmentValue + _onlinePaymentService.Interest(installmentValue, i);
                 double fullInstallment = updatedInstallment + _onlinePaymentService.PaymentFee(updatedInstallment);
 
-                contract.AddInstallment(new Installment(dueDate, installmentValue));
+                contract.AddInstallment(new Installment(dueDate, fullInstallment));
             }
         }
 
